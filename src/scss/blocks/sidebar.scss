@@ -1,0 +1,133 @@
+.sidebar {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+        display: none;
+    }
+
+    &__logo {
+        padding: $container-padding-md;
+        
+        img {
+            height: 40px;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__item {
+        font-size: 16px;
+        margin-bottom: $container-padding;
+        color: $color-text;
+        cursor: pointer;
+        transition: color 0.2s;
+        padding: 0 $container-padding-md;
+        position: relative;
+
+        &:hover {
+            color: $color-accent;
+        }
+
+        &--active {
+            color: $color-text;
+            background-color: $color-link;
+            border-left: 4px solid $color-accent;
+            padding-left: calc($container-padding-md - 4px);
+
+            &::before {
+                content: '';
+                position: absolute;
+                right: $container-padding-md;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: $color-accent;
+            }
+        }
+
+        &__icon {
+            width: 24px;
+            height: 24px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            opacity: 1;
+            transition: opacity 0.2s;
+
+            &:hover {
+                opacity: 0.7;
+            }
+
+            &--repair {
+                background-image: url('../img/repair.svg');
+            }
+
+            &--checkstatus {
+                background-image: url('../img/checkstatus.svg');
+            }
+        }
+    }
+
+    &__contacts {
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        gap: $container-padding;
+        padding: $container-padding-md;
+    }
+
+    &__icon {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        background: $color-accent;
+        border-radius: 50%;
+        margin-right: $container-padding;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 60%;
+        transition: background 0.2s;
+
+        &--chat {
+            background-image: url('../img/chat.svg');
+        }
+
+        &--profile {
+            background-image: url('../img/profile.svg');
+        }
+
+        &:hover {
+            background-color: $color-link;
+        }
+    }
+
+    &__mail,
+    &__phone {
+        font-size: 16px;
+        color: $color-text;
+        margin-top: $container-padding;
+    }
+
+    &__lang {
+        margin-top: $container-padding;
+        display: flex;
+        gap: $container-padding;
+        padding: 0 $container-padding-md;
+    }
+
+    &__lang-link {
+        color: $color-grey;
+        text-decoration: none;
+        font-size: 16px;
+
+        &--active {
+            color: $color-accent;
+        }
+    }
+}

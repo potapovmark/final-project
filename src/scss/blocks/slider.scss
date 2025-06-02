@@ -1,0 +1,81 @@
+.swiper-wrapper {
+    width: 240px;
+    height: 72px;
+    overflow: visible;
+    cursor: grab;
+}
+
+.swiper {
+    position: relative;
+    overflow: visible;
+    width: 240px;
+    height: 105px;
+}
+
+.swiper-wrapper:active {
+    cursor: grabbing;
+}
+
+.swiper-slide.brand-block__card {
+    width: 240px;
+    height: 72px;
+    background: #fff;
+    border: 1px solid $color-border;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    padding: 0 16px;
+
+    img {
+        max-width: 100%;
+        max-height: 40px;
+    }
+}
+
+.swiper-slide.brand-block__card.swiper-slide-active {
+    display: flex;
+    width: 240px;
+    height: 72px;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #444;
+}
+
+.brand-block__card-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.slider-indicator {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 0;
+    list-style: none;
+    z-index: 0;
+}
+
+.slider-indicator__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: inline-block;
+}
+
+.slider-indicator__dot--active {
+    background-color: #b5b6bc;
+}
+
+@media (max-width: 768px) {
+    // ... existing code ...
+}
