@@ -1,0 +1,28 @@
+@import './fonts.scss';
+@import './variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: $font-main;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $color-text;
+}
+
+@import 'blocks/header';
+@import 'blocks/menu';
+@import 'blocks/sidebar';
+@import 'blocks/services-main';
+@import 'blocks/brands';
+@import 'blocks/device-types';
+@import 'blocks/prices';
+@import 'blocks/footer';
+@import 'blocks/slider';
+@import 'swiper/css';
+@import 'swiper/css/pagination';

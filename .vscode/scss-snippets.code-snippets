@@ -1,0 +1,89 @@
+{
+  "SCSS Block": {
+    "prefix": "scss-block",
+    "body": [
+      ".${1:block} {",
+      "    $0",
+      "}"
+    ],
+    "description": "Создает новый SCSS блок"
+  },
+  "SCSS Font": {
+    "prefix": "scss-font",
+    "body": [
+      "@font-face {",
+      "    font-family: '${1:FontName}';",
+      "    src: url('../fonts/${1:FontName}/${1:FontName}.woff2') format('woff2'),",
+      "         url('../fonts/${1:FontName}/${1:FontName}.woff') format('woff');",
+      "    font-weight: ${2:400};",
+      "    font-style: ${3:normal};",
+      "    font-display: swap;",
+      "}"
+    ],
+    "description": "Добавляет @font-face"
+  },
+  "SCSS Element": {
+    "prefix": "scss-element",
+    "body": [
+      "&__${1:element} {",
+      "    $0",
+      "}"
+    ],
+    "description": "Создает новый элемент в SCSS блоке"
+  },
+  "SCSS Modifier": {
+    "prefix": "scss-modifier",
+    "body": [
+      "&--${1:modifier} {",
+      "    $0",
+      "}"
+    ],
+    "description": "Создает новый модификатор в SCSS блоке"
+  },
+  "SCSS Media Query": {
+    "prefix": "scss-media",
+    "body": [
+      "@media (min-width: $screen-${1:size}) {",
+      "    $0",
+      "}"
+    ],
+    "description": "Создает медиа-запрос"
+  },
+  "SCSS Flex": {
+    "prefix": "scss-flex",
+    "body": [
+      "display: flex;",
+      "align-items: ${1:center};",
+      "justify-content: ${2:space-between};",
+      "$0"
+    ],
+    "description": "Создает flex-контейнер"
+  },
+  "SCSS Grid": {
+    "prefix": "scss-grid",
+    "body": [
+      "display: grid;",
+      "grid-template-columns: ${1:repeat(auto-fit, minmax(250px, 1fr))};",
+      "gap: ${2:20px};",
+      "$0"
+    ],
+    "description": "Создает grid-контейнер"
+  },
+  "SCSS Transition": {
+    "prefix": "scss-transition",
+    "body": [
+      "transition: ${1:all} ${2:0.3s} ${3:ease};",
+      "$0"
+    ],
+    "description": "Добавляет transition"
+  },
+  "SCSS Hover": {
+    "prefix": "scss-hover",
+    "body": [
+      "&:hover {",
+      "    $0",
+      "}"
+    ],
+    "description": "Создает hover-эффект"
+  }
+}
