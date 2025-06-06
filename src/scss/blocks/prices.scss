@@ -1,0 +1,237 @@
+.prices {
+  margin: $container-padding-lg 0;
+  padding: 0 $container-padding;
+
+  @media (min-width: $screen-lg) {
+    margin-left: $menu-width;
+    padding: 0 $container-padding-md;
+
+    .swiper.prices__swiper {
+      display: none;
+    }
+  }
+
+  @media (max-width: $screen-lg) {
+    .container.prices__table {
+      display: none;
+    }
+  }
+
+  &__title-block {
+    width: 100vw;
+    height: 56px;
+    margin-left: -16px;
+    margin-right: -16px;
+    margin-bottom: 16px;
+    background: linear-gradient(to right, #f8f8f8 0%, #ffffff 100%);
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 400;
+    color: $color-grey;
+  }
+
+  *:focus {
+    outline: none;
+  }
+
+  .swiper {
+    position: relative;
+    overflow: visible;
+    width: 240px;
+    height: 200px;
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+
+  &__card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__card-service {
+    font-size: 14px;
+    font-weight: 400;
+    color: $color-text;
+    margin-bottom: 8px;
+    position: relative;
+    padding-top: 20px;
+
+    &::before {
+      content: 'Ремонтные услуги';
+      font-size: 14px;
+      font-weight: 500;
+      color: #7e7e82;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__card-price {
+    font-size: 14px;
+    font-weight: 400;
+    color: $color-text;
+    margin-bottom: 8px;
+    position: relative;
+    padding-top: 20px;
+
+    &::before {
+      content: 'Цена';
+      font-size: 14px;
+      font-weight: 500;
+      color: #7e7e82;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__card-time {
+    font-size: 14px;
+    font-weight: 400;
+    color: $color-text;
+    position: relative;
+    padding-top: 20px;
+
+    &::before {
+      content: 'Срок';
+      font-size: 14px;
+      font-weight: 500;
+      color: #7e7e82;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__table-container {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+
+    thead {
+      background: $color-main;
+    }
+
+    th {
+      padding: 16px;
+      text-align: left;
+      color: $color-grey;
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    td {
+      padding: 16px;
+      text-align: left;
+      font-size: 14px;
+      font-weight: 400;
+      border-bottom: 1px solid $color-border;
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+  }
+
+  &__order {
+    background: $color-accent;
+    color: #fff;
+    border: none;
+    border-radius: 16px;
+    font-family: 'TT Lakes';
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 119px;
+    height: 32px;
+    justify-content: center;
+    padding-left: 12px;
+    padding-right: 8px;
+
+    img {
+      filter: brightness(0) invert(1);
+      width: 24px;
+      height: 24px;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &--mobile {
+      display: none;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      @media (max-width: $screen-lg) {
+        display: flex;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @media (min-width: $screen-lg) {
+        display: flex;
+      }
+    }
+  }
+
+  &__note {
+    margin: 32px 0 16px 0;
+    color: $color-grey;
+    font-size: 14px;
+    width: 421px;
+  }
+
+  &__offer {
+    display: flex;
+    align-items: center;
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+
+  .swiper-wrapper {
+    width: 240px;
+    height: 160px;
+    overflow: visible;
+    cursor: grab;
+  }
+}
